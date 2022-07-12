@@ -1,126 +1,52 @@
-algoritmo "Cadastro"
-// Função :   Cadastro site de viagens
-// Autor :  Gabriela Chaves
+algoritmo "Cadastro_Clientes"
+// Autor : Gabriela Chaves de Menezes
 // Data : 24/06/2022
-// Seção de Declarações
+// Seção de Declarações 
+
 var
-nome_completo, destino, cad_pessoa, endereco: caracter
-cep, cpf, telefone: real
-opcao, data_nascimento: inteiro
+clientes: vetor[0..2, 0..7] de caracter
+i, j: inteiro
+rotulo: vetor[0..7] de caracter
+
 inicio
 // Seção de Comandos
 
-     escreval("Cadastro de cliente")
-     escreval("1-Adicionar novo")
-     escreval("2-Alterar")
-     escreval("3-Consultar")
-     escreval("4-Excluir")
-     escreval("5-Sair")
-leia (opcao)
-           se opcao=1 entao
-    escreva("Nome completo: ")
-leia(nome_completo)
-    escreva("Endereço: ")
-leia(endereco)
-    escreva("CEP: ")
-leia(cep)
-    escreva("CPF: ")
-leia(cpf)
-    escreva("Telefone: ")
-leia(telefone)
-    escreva("Data Nascimento: ")
-leia(data_nascimento)
-     senao
-          se opcao =2 então
-    escreval("Alterar dados")
-    escreval("Alterar Nome - 1")
-    escreval("Alterar Endereço - 2")
-    escreval("Aleterar CPF - 3")
-    escreval("Alterar Telefone - 4")
-    escreval("Alterar Data de Nascimento - 5")
-leia(tipo)
-         se tipo=1 então
-    escreva("Altere o Nome:")
-      senao
-           se tipo=2 então
-    escreva("Altere o Endereço:")
-      senao
-           se tipo=3 então
-    escreva("Altere o CPF:")
-      senao
-           se tipo=4 então
-    escreva("Altere o Telefone:")
-      senao
-           se tipo=5 então
-    escreva("Altere a Data de Nascimento:")
+   rotulo[0] <- "Nome completo: "
+   rotulo[1] <- "CPF: "
+   rotulo[2] <- "Endereço: "
+   rotulo[3] <- "Cidade: "
+   rotulo[4] <- "Estado: "
+   rotulo[5] <- "Telefone: "
+   rotulo[6] <- "Data de nascimento: "
+   rotulo[7] <- "Destino da viagem: "
 
-         senao
-          se opcao =3 então
-    escreval("Consultar dados")
-    escreval("Consultar Nome - 1")
-    escreval("Consultar Endereço - 2")
-    escreval("Consultar CPF - 3")
-    escreval("Consultar Telefone - 4")
-    escreval("Consultar Data de Nascimento - 5")
-leia(tipo)
-         se tipo=1 então
-    escreva("Consulte o Nome:")
-      senao
-           se tipo=2 então
-    escreva("Consulte o Endereço:")
-      senao
-           se tipo=3 então
-    escreva("Consulte o CPF:")
-      senao
-           se tipo=4 então
-    escreva("Consulte o Telefone:")
-      senao
-           se tipo=5 então
-    escreva("Consulte a Data de Nascimento:")
-    senao
-           se opcao=4 então
-    escreval("Excluir dados:")
-    escreval("Excluir Nome - 1")
-    escreval("Excluir Endereço - 2")
-    escreval("Excluir CPF - 3")
-    escreval("Excluir Telefone - 4")
-    escreval("Excluir Data de Nascimento - 5")
-leia(tipo)
-         se tipo=1 então
-         escreva("Exclua o Nome:")
-      senao
-           se tipo=2 então
-    escreva("Exclua o Endereço:")
-      senao
-           se tipo=3 então
-    escreva("Exclua o CPF:")
-      senao
-           se tipo=4 então
-    escreva("Exclua o Telefone:")
-      senao
-           se tipo=5 então
-    escreva("Exclua a Data de Nascimento:")
+   escreval("Cadastrar novo(a) cliente: ")
+   escreval()
+   
+   para i de 0 ate 2 faca
+          escreval("Cliente ", i+1)
+          
+        para j de 0 ate 7 faca
+        escreva (rotulo[j])
+        leia(clientes[i, j])
 
+        fimpara
 
-       fimse
-         fimse
-       fimse
-         fimse
-       fimse
-         fimse
-       fimse
-         fimse
-         fimse
-         fimse
-       fimse
-         fimse
-       fimse
-       fimse
-       fimse
-       fimse
-       fimse
-       fimse
-       fimse
-
+        escreval()
+   fimpara
+   
+   escreval("Fimm dos dados")
+   limpatela
+   escreval("** DADOS DOS CLIENTES **")
+   escreval()
+   para i de 0 ate 2 faca
+        para j de 0 ate 7 faca
+             escreva (rotulo[j])
+        escreval(clientes[i, j])
+        
+        fimpara
+        
+        escreval()
+   fimpara
 
 fimalgoritmo
