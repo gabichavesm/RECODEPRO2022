@@ -6,6 +6,10 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="./css/style.css">
+        
+        
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
@@ -43,81 +47,132 @@
         } 
         </style>
 
-    	<title>Trip Tour</title>
+    	<title>Destinos - Trip Tour</title>
 
     </head>
 
     <body>
 
-      <nav class="navbar navbar-expand-lg bg-light">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="projetoIndividualRecode.html">TRIP TOUR AGENCY</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNavDropdown">
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="projetoIndividualRecode.html">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="promocoes.html">Promoções</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="destino.html">Destinos</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="quemsomos.html">Quem somos</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="contato.html">Fale conosco</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="acessibilidade.html">Acessibilidade</a>
-              </li>
-                </ul>
-              </li>
+      <style> #img_redonda {
+        border-radius: 50%;
+        
+      }
+      
+      .navbar-custom {
+          background-color: #dbfff7c4;
+          border-color: #001e1d;
+    
+      }
+      .navbar-custom .navbar-brand,
+      .navbar-custom .navbar-text {
+          color: black;
+      }
+    </style>
+
+      <div class="header-main d-flex justify-content align-items-center">
+        <div class="header-logo"><a href="./projetoIndividualRecode.html"><img id="img_redonda" width="105" height="105" class="d-inline-block align-top" src="./imagens/logo_trip_tour (1).png" alt="TripTour"></a>
+      </div>
+          
+    
+          
+<nav class="navbar navbar-custom navbar-custom navbar-expand-lg bg-white d-flex justify-content-between mb-5">
+<div class="container-fluid">
+ <button class="navbar-toggler" type="button" data-toggle="dropdown" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+    <div class="collapse navbar-collapse" id="#navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item"><a class="nav-link" href="promocoes.html">Promoções</a></li>
+              
+        <li class="nav-item"><a class="nav-link" href="destino.html">Destinos</a></li>
+
+        <li class="nav-item"><a class="nav-link" href="acessibilidade.html">Acessibilidade</a></li>
             </ul>
-            <nav class="navbar bg-light">
+    </div>
+</nav>
+            <nav class="navbar nav-fill">
               <div class="container-fluid">
                 <form class="d-flex" role="search">
                   <input class="form-control me-2" type="search" placeholder="Pesquisar no site" aria-label="Search">
                   <button class="btn btn-outline-success" type="submit">Pesquisar</button>
                 </form>
+                
+                <a href="#" class="fa fa-facebook"></a>
+                <a href="#" class="fa fa-twitter"></a>
+                <a href="#" class="fa fa-instagram"></a>
+                <a href="#" class="fa fa-youtube"></a>
               </div>
             </nav>
           </div>
         </div>
       </nav>
 
+<!-- Control buttons -->
+<div id="myBtnContainer">
+  <button class="btn active" onclick="filterSelection('all')">Todos os destinos</button>
+  <button class="btn" onclick="filterSelection('nacionais')">Nacionais</button>
+  <button class="btn" onclick="filterSelection('internacionais')">Internacionais</button>
+</div>
 
-      <h3><b><font face="Poppins">Destinos Nacionais - Conheça o Brasil!</font></b></h3><br>
-        <b><p>As mil maravilhas do Nordeste</p></b>
-        <ul>
-          <li>Bonito - Pernambuco</li>
-          <li>Porto Seguro - Bahia</li>
-          <li>Búzios - Rio de janeiro</li>
-          <li>Recife - Pernambuco</li>
-          <li>Chapada dos Veadeiros - Goiás</li>
-          <li>Porto de Galinhas - Pernambuco</li>
-          <li>Jalapão - Tocantins</li>
-          <li>Tiradentes - Minas Gerais</li>
-        </ul>
-        <hr>
-        <h3><b><font face="Poppins">Destinos Internacionais - Viaje mundo a fora!</font></b></h3><br>
-          <ul>
-            <li>Bariloche - Argentina</li>
-            <li>Punta del Este -  Uruguai</li>
-            <li>Nova York - Estador Unidos</li>
-            <li>Amsterdã - Holanda</li>
-            <li>Viena - Áustria</li>
-            <li>Londres - Inglaterra</li>
-            <li>Ottawa - Canadá</li>
-            <li>Perth - Austrália</li>
-        </ul>
+<!-- The filterable elements. Note that some have multiple class names (this can be used if they belong to multiple categories) -->
+<div class="container">
+  <div class="filterDiv nacionais">Porto de Galinhas - Pernambuco</div>
+  <div class="filterDiv nacionais">Chapada dos Veadeiros - Goiás</div>
+  <div class="filterDiv nacionais">Gramado - Rio Grande do Sul</div>
+  <div class="filterDiv nacionais">Rio de Janeiro - Rio de Janeiro</div>
 
+  
+  <div class="filterDiv internacionais">Bariloche - Argentina</div>
+  <div class="filterDiv internacionais">Ottawa - Canadá</div>
+  <div class="filterDiv internacionais">Madrid - Espanha</div>
+  <div class="filterDiv internacionais">Los Angeles - Estados Unidos</div>
+</div>
+    
+<script>
+      filterSelection("all")
+      function filterSelection(c) {
+        var x, i;
+        x = document.getElementsByClassName("filterDiv");
+        if (c == "all") c = "";
+        for (i = 0; i < x.length; i++) {
+          w3RemoveClass(x[i], "show");
+          if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+        }
+      }
       
+      function w3AddClass(element, name) {
+        var i, arr1, arr2;
+        arr1 = element.className.split(" ");
+        arr2 = name.split(" ");
+        for (i = 0; i < arr2.length; i++) {
+          if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+        }
+      }
+      
+      function w3RemoveClass(element, name) {
+        var i, arr1, arr2;
+        arr1 = element.className.split(" ");
+        arr2 = name.split(" ");
+        for (i = 0; i < arr2.length; i++) {
+          while (arr1.indexOf(arr2[i]) > -1) {
+            arr1.splice(arr1.indexOf(arr2[i]), 1);     
+          }
+        }
+        element.className = arr1.join(" ");
+      }
+      
+      // Add active class to the current button (highlight it)
+      var btnContainer = document.getElementById("myBtnContainer");
+      var btns = btnContainer.getElementsByClassName("btn");
+      for (var i = 0; i < btns.length; i++) {
+        btns[i].addEventListener("click", function(){
+          var current = document.getElementsByClassName("active");
+          current[0].className = current[0].className.replace(" active", "");
+          this.className += " active";
+        });
+      }
+      </script>
       
     <center><font face= ="Poppins" size=2>&copy; Recode Pro</font></center>
-</body>
+  </body>
 </html>
